@@ -1,0 +1,434 @@
+/*
+////////////////////////start of editing of bootstrap
+*/
+html , body{
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+/*
+body{
+   direction: rtl;
+}
+
+*/
+.carousel .item img{
+    height: 500px;
+    width:100%;
+}
+
+.btn-success[disabled='disabled']{
+    background-color: #5cb85c;
+}
+.btn{
+    position: relative;
+    padding-right: 30px;
+}
+pre{
+    margin-top: 80px;
+}
+.form-group{
+    position: relative;
+}
+table{
+    width: 70%;
+    margin: auto;
+}
+table tbody tr td{
+    border: 1px solid #dddddd85;
+}
+    .col-md-4,.col-md-8,
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4,
+    .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8,
+    .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 
+    .col-xs-2,.col-xs-3 , .col-xs-6{
+        float: right;
+    }
+@media (min-width: 768px){
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4,
+    .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8,
+    .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 
+    .col-xs-2,.col-xs-3, .col-xs-6{
+        float: right;
+    }
+}
+
+@media (min-width: 992px){
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4,
+    .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8,
+    .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 
+    .col-xs-2,.col-xs-3, .col-xs-6{
+        float: right;
+    }
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../imgs/loading.gif') 50% 50% no-repeat;
+    background-color: #333;
+    opacity: .8;
+}
+
+@media (min-width: 768px){
+.container {
+    width: 95%;
+ }
+}
+@media (min-width: 992px){
+    .container {
+        width: 97%;
+    }
+}
+/*
+  /////////////////////////////////////////////////////////////////////////// start of navbar
+*/
+.header{
+    height: 500px;
+    overflow: hidden;
+    background-image: url(../imgs/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    color: rgba(3, 169, 244, 0.46);
+}
+.header canvas{
+    height: 500px;
+    width: 100%;
+    position: absolute;
+}
+
+.header h1{
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    width: 80%;
+    margin: auto;
+    display: block;
+    text-shadow: 10px 9px 10px #1b3058;
+    margin-top: 15%;
+}
+
+.header button{
+    border: none;
+    outline: none;
+    float: left;
+    text-align: center;
+    display: block;
+    width: 25%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bolder;
+    margin-top: 2%;
+    transition: 1s all;
+    background: -webkit-linear-gradient(left, #4f6363 , rgba(3, 169, 244, 0.46));
+    position: relative;
+}
+
+.header button:first-of-type{margin-left: 23%; margin-right: 3%;}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@media (max-width:767px){
+    .header button{
+        float: none;
+        margin: auto;
+        margin-left: 30% !important;
+        margin-bottom: 2%;
+        width: 40%;
+    }
+}
+@media (min-width:767px) and (max-width:992px){
+    .header button:last-of-type{
+        width: 34%;
+    }
+}
+/*end of header*/
+.navbar{
+    color: white;
+    display: block;
+    direction: rtl;
+}
+.navbar span{
+    margin: 8px 10px;
+    font-size: 25px;
+    display: inline-block;
+}
+.navbar span:first-of-type{
+    cursor: pointer;
+}
+.navbar-menu{
+    height: calc(100% - 69px);
+    overflow: hidden;
+    background-color: #337ab7;
+    color: white;
+    position: fixed;
+    right: 0px;
+    top: 69px;
+    transition: .5s all;
+    overflow: auto;
+}
+
+.navbar-menu .personal-data{
+    
+}
+.navbar-menu .personal-data img{
+    width: 50%;
+    height: 100px;
+    display: block;
+    margin: 20px auto;
+}
+.navbar-menu .personal-data p{
+    font-weight: bolder;
+}
+.navbar-menu ul{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 35px;
+    background-color: #286090;
+}
+.navbar-menu ul a{
+    color: white;
+    display: block;
+    text-decoration: none;
+   
+}
+.navbar-menu ul a li{
+    list-style: none;
+    transition: .5s all;
+}
+.navbar-menu ul a:last-of-type li:last-of-type{
+    border-bottom: 1px solid;
+}
+.navbar-menu  ul a li span{
+    margin: 10px 10px;
+    display: inline-block;
+    font-size: 20px;
+    
+}
+.navbar-menu  ul a li:hover{
+    padding-right: 10px;
+    background-color:#1a476d;
+}
+.page-content{
+    position: relative;
+    float: right;
+    
+    margin-top: 52px;
+    margin-right: 20px;
+    transition: .5s all;
+}
+
+
+/*
+  /////////////////////////////////////////////////////////////////////////// end of navbar
+*/
+
+
+
+/*
+  /////////////////////////////////////////////////////////////////////////// start of employee
+*/
+
+
+form.appform input{
+
+    border: none;
+    
+}
+
+form.appform label{
+
+    padding-left: 20px;
+    color: #337ab7;
+}
+
+form.appform input[type = 'submit']{
+
+    width: 90px;
+    height: 40px;
+    margin: 15px 0;
+    background-color: #008000;
+    color: #fff;
+    font-size: 21px;
+}
+
+form.appform .st-br{
+
+    border-bottom: 1px solid #337ab7;
+    border-left: 1px solid #337ab7;
+
+}
+/*
+  /////////////////////////////////////////////////////////////////////////// end of employee
+*/
+
+
+
+/*
+  /////////////////////////////////////////////////////////////////////////// start of  framework
+*/
+.img-circle {
+
+    border-radius: 50%;
+}
+
+.form-only{
+    max-width: 500px;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0px 0px 4px 1px;
+    
+}
+
+.open{
+   width: 250px;  
+   z-index: 99;
+}
+.close{
+    width: 0px;
+}
+.full-size{
+    width: 100%;
+    margin-right: 0px;
+}
+.most-size{
+    width: calc(100% - 250px);
+    margin-right: 250px;
+}
+
+
+form.data{
+    padding: 30px;
+    width: 60%;
+    margin: auto;
+}
+
+
+.icon-left{
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    font-size: 18px;
+    color: #31708f;
+}
+.icon-right{
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    font-size: 18px;
+    color: white;
+    z-index: 33;
+}
+.icon-statics{
+    color: white;
+    font-size: 20px;
+    
+    padding: 20px;
+    border-radius: 50%;
+}
+.a-button-icon{
+    position: absolute;
+    right: 10px;
+}
+
+.special-line{
+    border-top: 1px solid blue;
+    width: 3%;
+}
+
+.counting{
+    position: absolute;
+    left: 20%;
+}
+.clear{
+    clear: both;
+}
+
+#map{
+    width:100%;
+    height: 400px;
+}
+.img-icon{
+    width: 22px;
+    margin-right: 7px;
+}
+.clearfix{
+    clear: both;
+}
+/*
+  /////////////////////////////////////////////////////////////////////////// end of  framework
+*/
+
+
+/*
+  /////////////////////////////////////////////////////////////////////////// start of  editing plugin
+*/
+
+.dataTables_wrapper .dataTables_filter input{
+    border: 0px;
+    border-bottom: 2px solid #337ab7;
+    width: 90%;
+    margin-bottom: 15px;
+}
+.dataTables_wrapper .dataTables_filter input:focus{
+    box-shadow: none;
+    outline: 0px;
+}
+.dataTables_wrapper .dataTables_filter{
+    text-align: right;
+    width: 50%;
+    margin-right: 25%;
+}
+.dataTables_wrapper .dataTables_filter label{
+    width: 100%;
+}
+.dataTables_wrapper .dataTables_info{
+    display: none;
+}
+.dataTables_wrapper .dataTables_length{
+    display: none;
+}
+
+
+
+
+._jw-tpk-header{
+    font-size: 15px;
+}
+
+._jw-tpk-container ol>li>a{
+    padding: 5px 0px;
+    font-size: 13px;
+}
+form{
+    position: relative;
+}
+/*
+  /////////////////////////////////////////////////////////////////////////// end of  editing plugin
+*/

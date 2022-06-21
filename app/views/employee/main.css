@@ -1,0 +1,73 @@
+
+		.appform{
+			width: 500px;
+			margin: 20px 50px 0 20px;
+		}
+		div.wrapper{
+			overflow: hidden;
+		}
+
+		div.wrapper .empform{
+			float: left;
+		}
+		div.wrapper .empform fieldset{
+			background-color: #e4e4e4;
+
+		}
+		div.wrapper .empform fieldset p.massage{
+			background-color: green;
+			color: #FFF;
+			padding: 5px;
+			margin: 3px 0;
+			border-radius: 3px;
+			cursor: pointer;
+
+		}
+		div.wrapper .empform fieldset p.massage.error{
+			background-color: #900;
+		}
+		div.wrapper .empform fieldset legend{
+			background: #ff7300;
+			padding: 5px;
+			border-radius: 5px;
+		}
+		div.wrapper .empform table{
+			width: 100%;
+		}
+		div.wrapper .empform table input{
+		    padding: 5px;
+		    border: 0;
+		    border-radius: 5px;
+		    width: 100%;
+		    
+		}
+
+		div.wrapper .empform table input[type="submit"]{
+		    margin-top: 5px;
+		    background-color: #ff7300;
+		}
+
+        div.wrapper .emp{
+			float: right;
+		}
+
+		div.wrapper .emp table{
+			width: 600px;
+			margin: 20px 20px 0 0;
+			border-collapse: collapse;
+
+		}
+		div.wrapper .emp table thead th{
+			text-align: left;
+			padding: 5px;
+			background: #ff7300;
+		}
+
+		div.wrapper .emp table tbody tr:nth-child(2n) td{
+			
+			background-color: #e4e4e4;
+		}
+		div.wrapper .emp table tbody tr td a:link,
+		div.wrapper .emp table tbody tr td a:visited{
+			color: #0b00ff91 ;
+		}
