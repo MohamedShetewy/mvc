@@ -23,7 +23,7 @@ class Template
 	}
 
 	private function renderTemplateHeaderStart(){
-
+        extract($this->_data );
 	    require_once TEMPLATE_PATH . 'templateheaderstart.php';	
 	}
 
@@ -40,9 +40,10 @@ class Template
 			
 			trigger_error('sorry you have to define the template blocks',E_USER_WARNING);
 		}else{
+                extract($this->_data );
 				$parts = $this->_templateParts['template'];
 				if (!empty($parts)) {
-					extract($this->_data );
+
 
 					foreach ($parts as $partkey => $file){
 
@@ -64,13 +65,13 @@ class Template
 	private function renderHeaderResources(){
 
 		$output ='';
-		
+
 		if (!array_key_exists('header_resources', $this->_templateParts)) {
 			
 			trigger_error('sorry you have to define the headerresources ',E_USER_WARNING);
 		}else{
 				$resources = $this->_templateParts['header_resources'];
-				
+
 				//Generate CSS links
 
 				$css = $resources['css'];

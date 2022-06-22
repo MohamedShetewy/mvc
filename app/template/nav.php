@@ -17,16 +17,16 @@
             </li></a>
             <a href="/mvc/public/"><li>
                 <span><i class="fa fa-home"></i></span>
-                <span>Home</span>
+                <span><?= $text_dashboard?></span>
                
             </li></a>
-            <a href="/dashbord"><li>
+            <a href="/mvc/public/language"><li>
                 <span><i class="fa fa-chart-line"></i></span>
-                <span>لوحه التحكم</span>
+                <span>تغيير اللغه</span>
             </li></a>
             <a href="/mvc/public/employee"><li>
                 <span><i class="fa fa-user"></i></span>
-                <span> Employees </span>
+                <span> <?= $text_employees?> </span>
             </li></a>
             <a href="/auth/logout"><li>
                 <span><i class="fa fa-sign-out-alt"></i></span>            

@@ -14,6 +14,9 @@ $template_parts = require_once '../app/config/templateconfig.php';
 //var_dump( $template_parts);
 
 session_start();
+if (!isset($_SESSION['lang'])){
+    $_SESSION['lang'] = APP_DEFAULT_LANGUAGE;
+}
 
 $template = new Template($template_parts);
 $language = new Language();

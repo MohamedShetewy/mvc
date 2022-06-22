@@ -6,7 +6,7 @@ trait Helper
 {
 	public function redirect($path){
 		session_write_close();
-		header('Location: /mvc/public'. $path );
+		header('Location:'. $path );
 		exit;
 	}
 	

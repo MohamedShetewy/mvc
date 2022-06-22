@@ -8,12 +8,14 @@ class EmployeeController extends AbstractController {
 	use InputFilter;
 	use Helper;
 	public function defaultAction(){
+        $this->_language->load('template.common');
         $this->_language->load('employee.default');
 		$this->_data['employees'] = EmployeeModel::getALL() ;
 
 		$this->_view();
 	}
 	public function addAction(){
+        $this->_language->load('template.common');
 		if (isset($_POST['submit'])) {
 			
 			$emp = new EmployeeModel();
@@ -32,7 +34,7 @@ class EmployeeController extends AbstractController {
 	}
 
 	public function editAction(){
-      
+        $this->_language->load('template.common');
 		$id = $this->filterInt($this->_params[0]);
 		
 		$emp = EmployeeModel::getByPK($id);
@@ -60,7 +62,7 @@ class EmployeeController extends AbstractController {
 	}
 
 	public function deleteAction(){
-      
+        $this->_language->load('template.common');
 		$id = $this->filterInt($this->_params[0]);
 		
 		$emp = EmployeeModel::getByPK($id);
