@@ -11,6 +11,7 @@ class AbstractController{
     protected $_action  ;
     protected $_params ;
     protected $_template;
+    protected $_language;
 
     protected $_data = [];
 
@@ -38,6 +39,11 @@ class AbstractController{
 
 
 	}
+    public function setLanguage($language){
+        $this->_language = $language;
+
+
+    }
 
 
 
@@ -51,7 +57,8 @@ class AbstractController{
 			$view = VIEW_PATH . $this->_controller . '\\' . $this->_action . '.view.php';
 			if (file_exists($view)) {
 
-			   //extract($this->_data);
+
+                $this->_data = array_merge($this->_data,$this->_language->getDictionary());
 
 			    $this->_template->setActionViewFile($view);
 

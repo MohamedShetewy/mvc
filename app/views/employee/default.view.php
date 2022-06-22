@@ -88,7 +88,7 @@
 					unset($_SESSION['msg']);
 					}?>
 		<div class="emp">
-			<a href="employee/add">add new employee</a>
+			<a href="employee/add"><i class="fa fa-plus"></i><?= $text_add_employeee ?></a>
 			<table>
 				<thead>
 					<tr>

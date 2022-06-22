@@ -8,7 +8,7 @@ class EmployeeController extends AbstractController {
 	use InputFilter;
 	use Helper;
 	public function defaultAction(){
-        $this->_data['title'] = 'مرحبا بك';
+        $this->_language->load('employee.default');
 		$this->_data['employees'] = EmployeeModel::getALL() ;
 
 		$this->_view();

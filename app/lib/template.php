@@ -23,7 +23,7 @@ class Template
 	}
 
 	private function renderTemplateHeaderStart(){
-        extract($this->_data );
+
 	    require_once TEMPLATE_PATH . 'templateheaderstart.php';	
 	}
 

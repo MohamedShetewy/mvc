@@ -3,6 +3,7 @@ namespace PHPMVC;
 
 use PHPMVC\LIB\frontcontroller;
 
+use PHPMVC\LIB\Language;
 use PHPMVC\LIB\Template;
 
 
@@ -15,6 +16,7 @@ $template_parts = require_once '../app/config/templateconfig.php';
 session_start();
 
 $template = new Template($template_parts);
+$language = new Language();
 
-$frontcontroller = new frontcontroller($template);
+$frontcontroller = new frontcontroller($template,$language);
 $frontcontroller->dispath();
