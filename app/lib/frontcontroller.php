@@ -44,6 +44,7 @@ class Frontcontroller
             $actionName = $this->_action . 'Action';
             if(!class_exists($controllerClassName)){
                 $controllerClassName = self:: NOT_FOUND_CONTROLLER;
+
             }
             
             $controller = new $controllerClassName();
@@ -56,7 +57,7 @@ class Frontcontroller
            $controller->setParams($this->_params); 
            $controller->setTemplate($this->_template);
            $controller->setLanguage($this->_language);
-            $controller->$actionName();
+           $controller->$actionName();
         }
 
 }
