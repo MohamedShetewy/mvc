@@ -1,5 +1,6 @@
 <?php
 $_['text_dashboard'] = 'الاحصائيات العامه';
+$_['text_main_header'] = 'الصفحه الرئيسية';
 $_['text_app_manager'] = ' مدير التطبيق';
 $_['text_manager'] = 'محمد عاطف';
 $_['text_signin'] = 'تسجيل الدخول';

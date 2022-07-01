@@ -11,8 +11,8 @@
             <a href="/mvc/public/"><li><span><i class="fa fa-home"></i></span><span><?= $text_dashboard?></span></li></a>
             <a href="/mvc/public/transactions"><li><span><i class="fa fa-credit-card"></i></span><span><?= $text_transactions?></span></li></a>
 
-            <a href="/mvc/public/users"><li><span><i class="fa fa-users"></i></span><span><?= $text_users?></span></li></a>
-            <a href="/mvc/public/store"><li><span><i class="fa fa-home"></i></span><span><?= $text_store?></span></li></a>
+            <a href="/mvc/public/users"><li class="<?= $this->matchUrl('/mvc/public/users') === true ?'choose':''?>"><span><i class="fa fa-users"></i></span><span><?= $text_users?></span></li></a>
+            <a href="/mvc/public/store"><li class="<?= $this->matchUrl('/mvc/public/store') === true ?'choose':''?>"><span><i class="fa fa-home"></i></span><span><?= $text_store?></span></li></a>
             <a href="/mvc/public/clients"><li><span><i class="fa fa-user-circle"></i></span><span><?= $text_clients?></span></li></a>
             <a href="/mvc/public/suppliers"><li><span><i class="fa fa-user"></i></span><span><?= $text_suppliers?></span></li></a>
             <a href="/mvc/public/expenses"><li><span><i class="fa fa-money"></i></span><span><?= $text_expenses?></span></li></a>

@@ -303,13 +303,20 @@ form.appform .st-br{
 /*
   /////////////////////////////////////////////////////////////////////////// start of  framework
 */
-.wrapper .page-content h1{
+.wrapper .page-content a.button1{
     font-size: 1em;
     background-color: #337ab7;
     padding: 10px;
     color:#FFF;
     display: inline-block;
+    text-decoration: none;
 
+}
+.wrapper li.choose{
+    background-color: #204769;
+}
+.wrapper div.dataTables_wrapper{
+    margin-left: 48px;
 }
 .img-circle {
 

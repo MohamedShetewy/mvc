@@ -12,14 +12,18 @@ return [
 	],
 	'header_resources' => [
 		'css' => [
+            'bootstrap-min'           =>  CSS . 'bootstrap.min.css',
 			'bootstrap'           =>  CSS . 'bootstrap.css',
 			'animate'             =>  CSS . 'animate.css',
 			'font-awesome'        =>  CSS . 'font-awesome.css',
+            'dataTables'              =>  CSS . 'dataTables.bootstrap5.min.css',
 			'mainar'              =>  CSS . 'mainar.css'
 		]
 	],
 		'footer_resources' => [
 			'jquery'       => JS . 'jquery-3.2.1.min.js',
+            'dataTables'       => JS . 'jquery.dataTables.min.js',
+            'dataTables2'       => JS . 'dataTables.bootstrap5.min.js',
 			'bootstrap'    => JS . 'bootstrap.min.js',
 			'plugin'       => JS . 'plugin.js',
 			'font-awesome' => JS . 'fontawesome-all.min.js',

@@ -1,5 +1,7 @@
 <?php
 $_['text_dashboard'] = 'General stat.';
+$_['text_main_header'] = 'Main Page';
+
 $_['text_app_manager'] = 'Manager';
 $_['text_manager'] = 'Mohamed Atef';
 $_['text_signin'] = 'Sign In';

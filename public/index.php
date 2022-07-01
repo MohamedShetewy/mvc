@@ -5,7 +5,7 @@ use PHPMVC\LIB\frontcontroller;
 
 use PHPMVC\LIB\Language;
 use PHPMVC\LIB\SessionManager;
-use PHPMVC\LIB\Template;
+use PHPMVC\LIB\Template\template;
 
 
 require_once '../app/config/config.php';
