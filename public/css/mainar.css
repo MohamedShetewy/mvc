@@ -315,9 +315,38 @@ form.appform .st-br{
 .wrapper li.choose{
     background-color: #204769;
 }
-.wrapper div.dataTables_wrapper{
-    margin-left: 48px;
+
+.wrapper .table.table-striped thead th:last-child {
+    width: 20% ;
 }
+/************************************* sub manu*********************************/
+.con-menu{
+    transition: .5s all;
+    display: none;
+}
+.con-menu li{
+    list-style: none;
+    transition: .5s all;
+}
+.con-menu li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+.con-menu li a span{
+    margin: 2px 10px;
+    display: inline-block;
+    font-size: 16px;
+}
+.sub-menu{
+    padding-right: 20px;
+}
+
+.con-menu li:hover{
+    padding-right: 35px;
+    background-color:#1a476d;
+}
+/*************************************************************************/
 .img-circle {
 
     border-radius: 50%;

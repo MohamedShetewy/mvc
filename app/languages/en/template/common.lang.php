@@ -10,6 +10,10 @@ $_['text_lang'] = 'Change Language';
 $_['text_not_found'] = 'Page Not found';
 
 $_['text_users'] = 'Users';
+$_['text_list_users'] = 'List Of Users';
+$_['text_group_users'] = 'Gruops of Users';
+$_['text_Privileges'] = 'Privileges';
+
 $_['text_store'] = 'Store';
 $_['text_store_categories'] = 'Product Categories';
 $_['text_store_products'] = 'Products';

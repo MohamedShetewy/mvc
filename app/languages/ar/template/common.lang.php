@@ -9,6 +9,10 @@ $_['text_lang'] = 'تغيير اللغة';
 $_['text_not_found'] = 'الصفحة غير موجودة';
 
 $_['text_users'] = 'المستخدمين';
+$_['text_list_users'] = 'قائمة المستخدمين';
+$_['text_group_users'] = 'مجموعات المستخدمين';
+$_['text_Privileges'] = 'الصلاحيات';
+
 $_['text_store'] = 'المخزن';
 $_['text_store_categories'] = 'اصناف المنتجات';
 $_['text_store_products'] = 'المنتجات';

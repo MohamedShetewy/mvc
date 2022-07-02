@@ -32,7 +32,8 @@ return [
 			'mixitup'          => JS . 'jquery.mixitup.min.js',
 			'nicescroll'       => JS . 'jquery.nicescroll.min.js',
 			'wow'              => JS . 'wow.min.js',
-			'smooth'           => JS . 'jquery.smooth-scroll.js'
+			'smooth'           => JS . 'jquery.smooth-scroll.js',
+            'main'           => JS . 'main.js'
 		]
 	
 

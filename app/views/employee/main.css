@@ -39,7 +39,7 @@
 		    border: 0;
 		    border-radius: 5px;
 		    width: 100%;
-		    
+
 		}
 
 		div.wrapper .empform table input[type="submit"]{
@@ -64,7 +64,7 @@
 		}
 
 		div.wrapper .emp table tbody tr:nth-child(2n) td{
-			
+
 			background-color: #e4e4e4;
 		}
 		div.wrapper .emp table tbody tr td a:link,

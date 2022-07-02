@@ -1,5 +1,5 @@
 <div class="container">
-    <a href="/mvc/public/users/create" class="button1"><i class="fa fa-plus"></i> <?=$text_new_item?></a>
+    <a href="/mvc/public/usersgroups/create" class="button1"><i class="fa fa-plus"></i> <?=$text_new_item?></a>
     <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>

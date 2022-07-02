@@ -11,7 +11,14 @@
             <a href="/mvc/public/"><li><span><i class="fa fa-home"></i></span><span><?= $text_dashboard?></span></li></a>
             <a href="/mvc/public/transactions"><li><span><i class="fa fa-credit-card"></i></span><span><?= $text_transactions?></span></li></a>
 
-            <a href="/mvc/public/users"><li class="<?= $this->matchUrl('/mvc/public/users') === true ?'choose':''?>"><span><i class="fa fa-users"></i></span><span><?= $text_users?></span></li></a>
+
+            <a data-value=".user" href="#"><li class="<?= $this->matchUrl('/mvc/public/users') === true ?'choose':''?>"><span><i class="fa fa-users"></i></span><span><?= $text_users?></span></li></a>
+            <div class="user con-menu close">
+                <li class="sub-menu"><a href="/mvc/public/users"><span><?=$text_list_users?></span></a></li>
+                <li class="sub-menu"><a href="/mvc/public/usersgroups"><span><?=$text_group_users?></span></a></li>
+                <li class="sub-menu"><a href="/mvc/public/privileges"><span><?=$text_Privileges?></span></a></li>
+            </div>
+
             <a href="/mvc/public/store"><li class="<?= $this->matchUrl('/mvc/public/store') === true ?'choose':''?>"><span><i class="fa fa-home"></i></span><span><?= $text_store?></span></li></a>
             <a href="/mvc/public/clients"><li><span><i class="fa fa-user-circle"></i></span><span><?= $text_clients?></span></li></a>
             <a href="/mvc/public/suppliers"><li><span><i class="fa fa-user"></i></span><span><?= $text_suppliers?></span></li></a>
