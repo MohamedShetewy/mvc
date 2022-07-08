@@ -3,6 +3,7 @@ namespace PHPMVC\Controllers;
 use PHPMVC\LIB\Helper;
 use PHPMVC\LIB\InputFilter;
 use PHPMVC\Models\privilegesModel;
+use PHPMVC\Models\UserGroupprivilegeModel;
 
 
 class PrivilegesController extends AbstractController{
@@ -63,6 +64,14 @@ class PrivilegesController extends AbstractController{
 
         if ($privilege === false){
             $this->redirect('/mvc/public/privileges');
+        }
+
+        $groupprivileges = UserGroupprivilegeModel::getBy(['PrivilegeId' => $privilege->PrivilegeId]);
+
+        if (false !== $groupprivileges){
+            foreach ($groupprivileges as $deletedgroupprivilege){
+                $deletedgroupprivilege->delete();
+            }
         }
         if ($privilege->delete()){
             $this->redirect('/mvc/public/privileges');

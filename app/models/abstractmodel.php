@@ -48,16 +48,14 @@ class AbstractModel
 		return trim($nameParams,',');
 	}
 	private  function create(){
-
-		
-
 		$sql = 'INSERT INTO ' . static::$tableName .' SET ' . self::buildNameParametersSQL();
-		$stmt = Database::init()->prepare($sql);
+        $con = Database::init();
+		$stmt = $con->prepare($sql);
 		$this->prepareValues($stmt);
 	    if($stmt->execute()){
-	    	$result = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE,get_called_class());
-	    	var_dump($result) ;
-	    	//$this->{static::$primaryKey} = $result->id;
+	    	//$result = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE,get_called_class());
+
+            $this->{static::$primaryKey} = $con->lastInsertId();
 
 	    	return true;
 	    }
@@ -102,10 +100,6 @@ class AbstractModel
 
 
 	public static  function getByPK($pk){
-
-
-		
-
 		$sql = 'SELECT * FROM '. static::$tableName .' WHERE ' . static::$primaryKey  .' = "'. $pk .'"';
 		$stmt = Database::init()->prepare($sql);  
 		if ($stmt->execute() === true) {
@@ -123,10 +117,23 @@ class AbstractModel
 	     return false;  
 	}
 
+    public static  function getBy($column,$options = array()){
+
+        $whereClauseColumns = array_keys($column);
+        $whereClauseValues = array_values($column);
+        $whereClause = [];
+        for ($i = 0,$ii=count($whereClauseColumns);$i<$ii;$i++){
+            $whereClause[] = $whereClauseColumns[$i] . ' = "' . $whereClauseValues[$i] . '"' ;
+        }
+
+        $whereClause = implode(' AND ',$whereClause);
+
+        $sql = 'SELECT * FROM ' . static::$tableName . ' WHERE ' . $whereClause;
+        return static::get($sql,$options);
+    }
+
 	public static  function get($sql,$options = array()){
 
-
-			
 		$stmt = Database::init()->prepare($sql);
 	    if (!empty($options)) {
 	     	
@@ -145,11 +152,21 @@ class AbstractModel
 
 		    }
 	     }
-	     //var_dump($stmt);
-	     //var_dump($options);
+
+
 	    $stmt->execute();
-		$result = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE,get_called_class(),array_keys(static::$tableSchema));
-	    return (is_array($result) && !empty($result))  ? $result : false;
+        if (method_exists(get_called_class(),'__construct')) {
+            $result = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE,get_called_class(),array_keys(static::$tableSchema));
+
+        }else{
+            $result = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE,get_called_class());
+
+        }
+
+        if ((is_array($result) && !empty($result))) {
+            return new \ArrayIterator($result);
+        };
+        return false;
 	       
 	}
 
